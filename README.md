@@ -14,4 +14,4 @@ The instructions tell us right off the bat how many components we will need (2) 
 
 ### Planning
 
-The instructions 
+#### State Management
