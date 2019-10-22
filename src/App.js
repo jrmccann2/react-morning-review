@@ -23,13 +23,16 @@ class App extends Component {
   }
 
   handleClick(){
-    this.setState({list: [...this.state.list, this.state.input]})
+    this.setState({
+      list: [...this.state.list, this.state.input],
+      input: ""
+    })
   }
 
   render() {
     return (
       <div>
-        <input placeholder="Add a task..." onChange={this.handleChange} />
+        <input placeholder="Add a task..." value={this.state.input} onChange={this.handleChange} />
         <button onClick={this.handleClick}>Add Task</button>
       </div>
     );
