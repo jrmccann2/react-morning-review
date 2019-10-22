@@ -18,6 +18,6 @@ The instructions tell us right off the bat how many components we will need (2) 
 
 Since we are told that Todo is just to display the list items that we create we will keep it stateless. Whenever we hear that a component will just *display* something we should think **functional, stateless component** (it is a good rule of thumb). If logic needs to be executed within a component then you would likely want to choose a **class-based, stateful component**. In this case, App will be class-based and stateful since it will be handling input and storing that input in a list (array).
 
-### Methods
+#### Methods
 
 We know that we will need to be able to type something and then add that input to our list. We will need two methods to achieve this. Our first method will handle updating our *input* property on state as we type into our input box. The second method will handle adding our input value to our *list* property which is an array.
