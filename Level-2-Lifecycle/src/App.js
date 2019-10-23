@@ -7,8 +7,6 @@ import Todo from "./components/Todo";
 // Stylesheets
 import "./App.css";
 
-let timeOutID;
-
 class App extends Component {
   constructor() {
     super();
@@ -23,6 +21,16 @@ class App extends Component {
 
   componentDidMount() {
     console.log("componentDidMount", {state: this.state, props: this.props});
+    /**
+     * componentDidMount() is invoked immediately after a component is mounted (inserted into the tree). This
+     * occurs AFTER the initial render!
+     * 
+     * Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint,
+     * this is a good place to instantiate the network request. This method is a good place to set up any
+     * subscriptions. If you do that, don’t forget to unsubscribe in componentWillUnmount().
+     * 
+     * This is a great place to make network requests! (Think axios)
+     */
   }
 
   componentDidUpdate(prevProps, prevState) {
