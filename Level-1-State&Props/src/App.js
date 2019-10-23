@@ -79,7 +79,7 @@ export default App; // Note11
   *       let obectToUpdateState = { input: event.target.value }
   *       this.setState(objectToUpdateState)
   * 
-  * Note7: render is a method used by react to know what to display from a component. We write our JSX in the return from render
+  * Note7: render is a lifecycle method used by react to know what to display from a component. We write our JSX in the return from render
   *        and React converts it into valid HTML
   * 
   * Note8: We put all of our JSX in parentheses to allow us to have our JSX on multiple lines. Otherwise, we would have to type
