@@ -35,12 +35,15 @@ class App extends Component { // Note1
       <div>
         <input placeholder="Add a task..." value={this.state.input} onChange={this.handleChange} /> {/* Note9 */}
         <button onClick={this.handleClick}>Add Task</button>
+        {this.state.list.map( (todo, index) => (
+          <Todo key={index} todo={todo} />
+        ))} {/* Note10 */}
       </div>
     );
   }
 }
 
-export default App; // Note10
+export default App; // Note11
 
  /**
   * Note1: extends Component means we will inherit some of the functionality of the Component class that comes with React
@@ -87,7 +90,13 @@ export default App; // Note10
   *             the handleClick sets this.state.input equal to "" (line 57) onChange - an event handler that we can have fire a
   *             function anytime the value of our input box changes
   * 
-  * Note10: 
+  * Note10: Here we use the .map array method to create an array of Todo components equal in length to our list array on state.
+  *         We give the component a "key" prop because React wants a unique key to identify each instance by. We then give it a
+  *         "todo" prop and set this equal to the string in our array that the .map function is currently looking at. We use
+  *         the name "todo" because that is what we named the array element (line 38) when we declared our callback function for
+  *         .map
+  * 
+  * Note11: 
   *   **export** allows us to expose some of our code to other files. They can access it using **import**
   *   **default** means that when we import this code into another file will we get our full class App code
   *   by default. When something is just exported we have to wrap it in curly brackets when we import it. When
