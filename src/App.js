@@ -35,9 +35,11 @@ class App extends Component { // Note1
       <div>
         <input placeholder="Add a task..." value={this.state.input} onChange={this.handleChange} /> {/* Note9 */}
         <button onClick={this.handleClick}>Add Task</button>
-        {this.state.list.map( (todo, index) => (
-          <Todo key={index} todo={todo} />
-        ))} {/* Note10 */}
+        <ul>
+          {this.state.list.map( (todo, index) => (
+            <Todo key={index} todo={todo} />
+          ))} {/* Note10 */}
+        </ul>
       </div>
     );
   }
